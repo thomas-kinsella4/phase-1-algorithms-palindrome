@@ -1,9 +1,26 @@
-function isPalindrome(word) {
+
+
+const isPalindrome = function(word) {
   // Write your algorithm here
+  const wordArray = word.split("");
+  const reversedArray = [...wordArray].reverse();
+  const newWord1 = wordArray.join("");
+  const newWord2 = reversedArray.join("");
+  if (newWord1 === newWord2) {
+    return (true);
+  } else {
+    return (false);
+  }
 }
 
 /* 
+  we need to create a function that reads a string and decides whether it is a palindrome, which means it is spelled the same way forwards as it is backwards
+  
   Add your pseudocode here
+  we need to split the word into an array of all of its letters
+  then we need to reverse that array
+  then we need to compare the original array to the reversed array
+  then we need to return true or false depending on if the arrays match
 */
 
 /*
@@ -22,4 +39,4 @@ if (require.main === module) {
   console.log("=>", isPalindrome("robot"));
 }
 
-module.exports = isPalindrome;
+//module.exports = isPalindrome;
